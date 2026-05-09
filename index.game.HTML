@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            overflow:hidden;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        #score{
+            font-size:30px;
+            margin:20px;
+        }
+
+        #emoji{
+            font-size:60px;
+            position:absolute;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Funny Game 🎮</h1>
+
+    <div id="score">
+        Score: 0
+    </div>
+
+    <div id="emoji">
+        😂
+    </div>
+
+    <script>
+
+        let score = 0;
+
+        let emoji = document.getElementById("emoji");
+
+        function moveEmoji(){
+
+            let x = Math.random() * 300;
+            let y = Math.random() * 500;
+
+            emoji.style.left = x + "px";
+            emoji.style.top = y + "px";
+        }
+
+        emoji.onclick = function(){
+
+            score++;
+
+            document.getElementById("score").innerHTML =
+            "Score: " + score;
+
+            moveEmoji();
+        }
+
+        moveEmoji();
+
+    </script>
+
+</body>
+</html>

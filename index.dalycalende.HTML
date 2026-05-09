@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Daily Mood</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:60px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        .mood{
+
+            font-size:50px;
+            cursor:pointer;
+            margin:15px;
+        }
+
+        #result{
+
+            margin-top:40px;
+            font-size:28px;
+            color:#444;
+        }
+
+        #date{
+
+            margin-top:20px;
+            font-size:20px;
+            color:#666;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Daily Mood 🌤️</h1>
+
+    <div id="date"></div>
+
+    <div>
+
+        <span class="mood"
+        onclick="saveMood('Happy 😊')">
+
+            😊
+
+        </span>
+
+        <span class="mood"
+        onclick="saveMood('Sad 😔')">
+
+            😔
+
+        </span>
+
+        <span class="mood"
+        onclick="saveMood('Stress 😣')">
+
+            😣
+
+        </span>
+
+        <span class="mood"
+        onclick="saveMood('Relaxed 🌸')">
+
+            🌸
+
+        </span>
+
+    </div>
+
+    <div id="result">
+
+        Select your mood for today ✨
+
+    </div>
+
+    <script>
+
+        let today =
+        new Date().toDateString();
+
+        document.getElementById("date").innerHTML =
+        today;
+
+        function saveMood(mood){
+
+            localStorage.setItem("todayMood", mood);
+
+            document.getElementById("result").innerHTML =
+
+            "Today's Mood: " + mood;
+
+        }
+
+        let savedMood =
+        localStorage.getItem("todayMood");
+
+        if(savedMood){
+
+            document.getElementById("result").innerHTML =
+
+            "Today's Mood: " + savedMood;
+
+        }
+
+    </script>
+
+</body>
+</html>

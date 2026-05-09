@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Dark Mode</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:80px;
+            transition:0.5s;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        button{
+
+            padding:15px 30px;
+            font-size:20px;
+            border:none;
+            border-radius:15px;
+            background:#4caf50;
+            color:white;
+            cursor:pointer;
+        }
+
+        .dark{
+
+            background:#222;
+            color:white;
+        }
+
+    </style>
+
+</head>
+
+<body id="body">
+
+    <h1>Mind Care 🌙</h1>
+
+    <button onclick="darkMode()">
+        Dark Mode
+    </button>
+
+    <script>
+
+        function darkMode(){
+
+            document.getElementById("body")
+            .classList.toggle("dark");
+
+        }
+
+    </script>
+
+</body>
+</html>

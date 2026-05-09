@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Dashboard</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            font-family:Arial;
+            text-align:center;
+        }
+
+        h1{
+            margin-top:40px;
+            color:#333;
+        }
+
+        .box{
+
+            width:250px;
+            margin:auto;
+            margin-top:40px;
+        }
+
+        button{
+
+            width:100%;
+            padding:15px;
+            margin:10px;
+            font-size:20px;
+            border:none;
+            border-radius:15px;
+            background:#4caf50;
+            color:white;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+
+            background:#388e3c;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care 🧠</h1>
+
+    <div class="box">
+
+        <button onclick="feature('Mood Tracker 😊')">
+            Mood Tracker 😊
+        </button>
+
+        <button onclick="feature('AI Chat 🤖')">
+            AI Chat 🤖
+        </button>
+
+        <button onclick="feature('Relax Music 🎵')">
+            Relax Music 🎵
+        </button>
+
+        <button onclick="feature('Funny Game 🎮')">
+            Funny Game 🎮
+        </button>
+
+        <button onclick="feature('Journal 📝')">
+            Journal 📝
+        </button>
+
+    </div>
+
+    <script>
+
+        function feature(name){
+
+            alert(name + " Opened 🎉");
+
+        }
+
+    </script>
+
+</body>
+</html>

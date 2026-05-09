@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Meditation Timer</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:80px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        #timer{
+
+            font-size:60px;
+            margin-top:40px;
+            color:#444;
+        }
+
+        button{
+
+            margin-top:30px;
+            padding:15px 30px;
+            font-size:20px;
+            border:none;
+            border-radius:15px;
+            background:#4caf50;
+            color:white;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Meditation ⏰</h1>
+
+    <div id="timer">
+
+        60
+
+    </div>
+
+    <button onclick="startTimer()">
+
+        Start Meditation
+
+    </button>
+
+    <script>
+
+        let time = 60;
+
+        function startTimer(){
+
+            let countdown = setInterval(function(){
+
+                time--;
+
+                document.getElementById("timer").innerHTML =
+                time;
+
+                if(time == 0){
+
+                    clearInterval(countdown);
+
+                    alert("Meditation Complete 🌸");
+
+                }
+
+            },1000);
+
+        }
+
+    </script>
+
+</body>
+</html>

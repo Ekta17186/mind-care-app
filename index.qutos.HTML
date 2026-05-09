@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Quotes</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:80px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        #quote{
+
+            width:300px;
+            margin:auto;
+            margin-top:40px;
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            box-shadow:0 0 10px gray;
+            font-size:22px;
+            color:#444;
+        }
+
+        button{
+
+            margin-top:30px;
+            padding:15px 30px;
+            font-size:20px;
+            border:none;
+            border-radius:15px;
+            background:#4caf50;
+            color:white;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Positive Quotes 🌸</h1>
+
+    <div id="quote">
+
+        Click the button for positivity ✨
+
+    </div>
+
+    <button onclick="newQuote()">
+
+        New Quote
+
+    </button>
+
+    <script>
+
+        let quotes = [
+
+            "You are stronger than you think 💙",
+
+            "One small step every day 🌸",
+
+            "Take a deep breath and smile 😊",
+
+            "Your mind deserves peace ✨",
+
+            "Better days are coming 🌈"
+
+        ];
+
+        function newQuote(){
+
+            let random =
+            Math.floor(Math.random() * quotes.length);
+
+            document.getElementById("quote").innerHTML =
+            quotes[random];
+        }
+
+    </script>
+
+</body>
+</html>

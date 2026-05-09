@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Reminder</title>
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        body{
+
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:80px;
+        }
+
+        h1{
+
+            color:#333;
+        }
+
+        button{
+
+            padding:15px 30px;
+            font-size:20px;
+            border:none;
+            border-radius:15px;
+            background:#4caf50;
+            color:white;
+            cursor:pointer;
+        }
+
+        #message{
+
+            margin-top:30px;
+            font-size:24px;
+            color:#444;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Reminder 🔔</h1>
+
+    <button onclick="setReminder()">
+
+        Set Daily Reminder
+
+    </button>
+
+    <div id="message"></div>
+
+    <script>
+
+        function setReminder(){
+
+            document.getElementById("message").innerHTML =
+
+            "Reminder Set 🌸<br><br>" +
+
+            "Take care of your mind today 💙";
+
+            setTimeout(function(){
+
+                alert("Mind Care Reminder 🌈");
+
+            },5000);
+
+        }
+
+    </script>
+
+</body>
+</html>

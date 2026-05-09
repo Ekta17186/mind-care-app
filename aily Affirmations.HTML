@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Affirmations</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:70px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        #affirmation{
+
+            width:320px;
+            margin:auto;
+            margin-top:40px;
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            box-shadow:0 0 10px gray;
+            font-size:24px;
+            color:#444;
+        }
+
+        button{
+
+            margin-top:30px;
+            padding:15px 30px;
+            font-size:20px;
+            border:none;
+            border-radius:15px;
+            background:#9c27b0;
+            color:white;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Daily Affirmations ✨</h1>
+
+    <div id="affirmation">
+
+        Click below for positivity 🌸
+
+    </div>
+
+    <button onclick="showAffirmation()">
+
+        Show Affirmation
+
+    </button>
+
+    <script>
+
+        let affirmations = [
+
+            "I am calm and strong 💙",
+
+            "My mind deserves peace 🌸",
+
+            "I can handle challenges ✨",
+
+            "I am improving every day 🌈",
+
+            "I choose positivity today 😊"
+
+        ];
+
+        function showAffirmation(){
+
+            let random =
+            Math.floor(Math.random() * affirmations.length);
+
+            document.getElementById("affirmation").innerHTML =
+
+            affirmations[random];
+
+        }
+
+    </script>
+
+</body>
+</html>

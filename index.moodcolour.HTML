@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Mood Colors</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:80px;
+            transition:0.5s;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        button{
+
+            margin:10px;
+            padding:15px 25px;
+            font-size:20px;
+            border:none;
+            border-radius:15px;
+            color:white;
+            cursor:pointer;
+        }
+
+        .happy{
+            background:#4caf50;
+        }
+
+        .sad{
+            background:#2196f3;
+        }
+
+        .stress{
+            background:#ff5722;
+        }
+
+    </style>
+</head>
+
+<body id="body">
+
+    <h1>Mind Care Mood Colors 🌈</h1>
+
+    <button class="happy"
+    onclick="happyMood()">
+
+        Happy 😊
+
+    </button>
+
+    <button class="sad"
+    onclick="sadMood()">
+
+        Sad 😔
+
+    </button>
+
+    <button class="stress"
+    onclick="stressMood()">
+
+        Stress 😣
+
+    </button>
+
+    <script>
+
+        function happyMood(){
+
+            document.getElementById("body")
+            .style.background = "#c8f7c5";
+
+        }
+
+        function sadMood(){
+
+            document.getElementById("body")
+            .style.background = "#c5dfff";
+
+        }
+
+        function stressMood(){
+
+            document.getElementById("body")
+            .style.background = "#ffd6c5";
+
+        }
+
+    </script>
+
+</body>
+</html>

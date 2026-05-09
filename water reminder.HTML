@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Water Tracker</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:70px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        #count{
+
+            font-size:70px;
+            margin-top:30px;
+            color:#2196f3;
+        }
+
+        button{
+
+            margin-top:25px;
+            padding:15px 30px;
+            font-size:20px;
+            border:none;
+            border-radius:15px;
+            background:#2196f3;
+            color:white;
+            cursor:pointer;
+        }
+
+        #message{
+
+            margin-top:30px;
+            font-size:24px;
+            color:#444;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Water Tracker 💧</h1>
+
+    <div id="count">
+
+        0
+
+    </div>
+
+    <button onclick="drinkWater()">
+
+        Drink Water
+
+    </button>
+
+    <div id="message"></div>
+
+    <script>
+
+        let water =
+        localStorage.getItem("water");
+
+        if(water == null){
+
+            water = 0;
+        }
+
+        document.getElementById("count").innerHTML =
+        water;
+
+        function drinkWater(){
+
+            water++;
+
+            localStorage.setItem("water", water);
+
+            document.getElementById("count").innerHTML =
+            water;
+
+            document.getElementById("message").innerHTML =
+
+            "Great! Stay hydrated 🌊";
+
+        }
+
+    </script>
+
+</body>
+</html>

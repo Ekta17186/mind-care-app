@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Login</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:100px;
+        }
+
+        .login-box{
+
+            width:300px;
+            margin:auto;
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        input{
+
+            width:90%;
+            padding:12px;
+            margin-top:20px;
+            border-radius:10px;
+            border:1px solid gray;
+            font-size:16px;
+        }
+
+        button{
+
+            margin-top:20px;
+            padding:12px 25px;
+            font-size:18px;
+            border:none;
+            border-radius:10px;
+            background:#4caf50;
+            color:white;
+            cursor:pointer;
+        }
+
+        #message{
+
+            margin-top:20px;
+            font-size:22px;
+            color:#444;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h1>Mind Care Login 🔐</h1>
+
+        <input type="text"
+        id="name"
+        placeholder="Enter your name">
+
+        <br>
+
+        <button onclick="login()">
+            Login
+        </button>
+
+        <div id="message"></div>
+
+    </div>
+
+    <script>
+
+        function login(){
+
+            let name =
+            document.getElementById("name").value;
+
+            document.getElementById("message").innerHTML =
+
+            "Welcome " + name + " 😊";
+
+        }
+
+    </script>
+
+</body>
+</html>

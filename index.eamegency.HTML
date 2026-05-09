@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Emergency</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:70px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        .help{
+
+            padding:15px 30px;
+            font-size:22px;
+            border:none;
+            border-radius:15px;
+            background:red;
+            color:white;
+            cursor:pointer;
+        }
+
+        #message{
+
+            margin-top:30px;
+            font-size:24px;
+            color:#444;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Emergency Help 🚨</h1>
+
+    <button class="help"
+    onclick="helpMessage()">
+
+        Need Help
+
+    </button>
+
+    <div id="message"></div>
+
+    <script>
+
+        function helpMessage(){
+
+            document.getElementById("message").innerHTML =
+
+            "You are not alone 💙<br><br>" +
+
+            "Talk to someone you trust 🌸<br><br>" +
+
+            "Contact a real counselor or emergency support 📞";
+
+        }
+
+    </script>
+
+</body>
+</html>

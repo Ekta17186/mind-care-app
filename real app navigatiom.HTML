@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care App</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:Arial;
+            background:#dff6ff;
+            text-align:center;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        .navbar{
+
+            background:#4caf50;
+            padding:15px;
+            display:flex;
+            justify-content:space-around;
+        }
+
+        .navbar button{
+
+            background:white;
+            border:none;
+            padding:10px 15px;
+            border-radius:10px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .page{
+
+            display:none;
+            padding:30px;
+        }
+
+        #home{
+            display:block;
+        }
+
+        .card{
+
+            background:white;
+            padding:20px;
+            margin:20px auto;
+            width:250px;
+            border-radius:15px;
+            box-shadow:0 0 10px gray;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <button onclick="showPage('home')">
+            Home
+        </button>
+
+        <button onclick="showPage('mood')">
+            Mood
+        </button>
+
+        <button onclick="showPage('music')">
+            Music
+        </button>
+
+        <button onclick="showPage('game')">
+            Game
+        </button>
+
+    </div>
+
+    <!-- HOME -->
+
+    <div class="page" id="home">
+
+        <h1>Mind Care 🧠</h1>
+
+        <div class="card">
+            Welcome to Mind Care 🌸
+        </div>
+
+    </div>
+
+    <!-- MOOD -->
+
+    <div class="page" id="mood">
+
+        <h1>Mood Tracker 😊</h1>
+
+        <div class="card">
+            Feeling Happy Today ✨
+        </div>
+
+    </div>
+
+    <!-- MUSIC -->
+
+    <div class="page" id="music">
+
+        <h1>Relax Music 🎵</h1>
+
+        <div class="card">
+            Calm your mind 🌈
+        </div>
+
+    </div>
+
+    <!-- GAME -->
+
+    <div class="page" id="game">
+
+        <h1>Funny Game 🎮</h1>
+
+        <div class="card">
+            Stress Free Fun 😄
+        </div>
+
+    </div>
+
+    <script>
+
+        function showPage(pageId){
+
+            let pages =
+            document.getElementsByClassName("page");
+
+            for(let i=0; i<pages.length; i++){
+
+                pages[i].style.display = "none";
+
+            }
+
+            document.getElementById(pageId)
+            .style.display = "block";
+        }
+
+    </script>
+
+</body>
+</html>

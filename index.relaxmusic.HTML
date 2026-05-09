@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Music</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:80px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        button{
+
+            padding:15px 30px;
+            font-size:20px;
+            border:none;
+            border-radius:15px;
+            background:#4caf50;
+            color:white;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Relax Music 🎵</h1>
+
+    <button onclick="playMusic()">
+        Play Relax Music
+    </button>
+
+    <audio id="music">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+        type="audio/mpeg">
+    </audio>
+
+    <script>
+
+        function playMusic(){
+
+            document.getElementById("music").play();
+
+        }
+
+    </script>
+
+</body>
+</html>

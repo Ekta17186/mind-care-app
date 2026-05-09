@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Journal</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:50px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        textarea{
+
+            width:300px;
+            height:150px;
+            padding:10px;
+            border-radius:10px;
+            border:1px solid gray;
+            font-size:16px;
+        }
+
+        button{
+
+            margin-top:20px;
+            padding:12px 25px;
+            font-size:18px;
+            border:none;
+            border-radius:10px;
+            background:#4caf50;
+            color:white;
+            cursor:pointer;
+        }
+
+        #message{
+
+            margin-top:20px;
+            font-size:22px;
+            color:#444;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Journal 📝</h1>
+
+    <textarea id="note"
+    placeholder="Write your thoughts here...">
+    </textarea>
+
+    <br>
+
+    <button onclick="saveNote()">
+        Save Note
+    </button>
+
+    <div id="message"></div>
+
+    <script>
+
+        function saveNote(){
+
+            let note =
+            document.getElementById("note").value;
+
+            localStorage.setItem("mindcareNote", note);
+
+            document.getElementById("message").innerHTML =
+            "Your note is saved 💙";
+        }
+
+    </script>
+
+</body>
+</html>

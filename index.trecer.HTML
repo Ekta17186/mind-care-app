@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Goals</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:70px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        input{
+
+            width:250px;
+            padding:12px;
+            font-size:18px;
+            border-radius:10px;
+            border:1px solid gray;
+        }
+
+        button{
+
+            margin-top:20px;
+            padding:12px 25px;
+            font-size:18px;
+            border:none;
+            border-radius:10px;
+            background:#4caf50;
+            color:white;
+            cursor:pointer;
+        }
+
+        #goal{
+
+            margin-top:30px;
+            font-size:24px;
+            color:#444;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Daily Goal 🎯</h1>
+
+    <input type="text"
+    id="goalInput"
+    placeholder="Enter your goal">
+
+    <br>
+
+    <button onclick="saveGoal()">
+
+        Save Goal
+
+    </button>
+
+    <button onclick="completeGoal()">
+
+        Complete Goal
+
+    </button>
+
+    <div id="goal">
+
+        No Goal Yet 🌸
+
+    </div>
+
+    <script>
+
+        function saveGoal(){
+
+            let goal =
+            document.getElementById("goalInput").value;
+
+            localStorage.setItem("dailyGoal", goal);
+
+            document.getElementById("goal").innerHTML =
+
+            "Today's Goal: " + goal;
+
+        }
+
+        function completeGoal(){
+
+            document.getElementById("goal").innerHTML +=
+
+            "<br><br>Goal Completed 🎉";
+
+        }
+
+        let savedGoal =
+        localStorage.getItem("dailyGoal");
+
+        if(savedGoal){
+
+            document.getElementById("goal").innerHTML =
+
+            "Today's Goal: " + savedGoal;
+
+        }
+
+    </script>
+
+</body>
+</html>

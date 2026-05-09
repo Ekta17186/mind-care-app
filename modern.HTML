@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Modern UI</title>
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        body{
+
+            margin:0;
+            font-family:Arial;
+            background:linear-gradient(to right,#74ebd5,#acb6e5);
+            text-align:center;
+        }
+
+        h1{
+
+            color:white;
+            margin-top:40px;
+            font-size:40px;
+        }
+
+        .container{
+
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            margin-top:40px;
+        }
+
+        .card{
+
+            width:250px;
+            background:white;
+            margin:20px;
+            padding:25px;
+            border-radius:20px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+            transition:0.3s;
+        }
+
+        .card:hover{
+
+            transform:scale(1.05);
+        }
+
+        h2{
+
+            color:#333;
+        }
+
+        p{
+
+            color:#666;
+            font-size:18px;
+        }
+
+        button{
+
+            margin-top:15px;
+            padding:12px 25px;
+            border:none;
+            border-radius:12px;
+            background:#4caf50;
+            color:white;
+            font-size:18px;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care 🧠✨</h1>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>Mood Tracker 😊</h2>
+
+            <p>Track your emotions daily</p>
+
+            <button onclick="openFeature('Mood Tracker')">
+
+                Open
+
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <h2>AI Chat 🤖</h2>
+
+            <p>Talk without fear</p>
+
+            <button onclick="openFeature('AI Chat')">
+
+                Open
+
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Relax Music 🎵</h2>
+
+            <p>Calm your mind</p>
+
+            <button onclick="openFeature('Relax Music')">
+
+                Open
+
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Funny Games 🎮</h2>
+
+            <p>Stress free fun activities</p>
+
+            <button onclick="openFeature('Funny Games')">
+
+                Open
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function openFeature(name){
+
+            alert(name + " Opened 🎉");
+
+        }
+
+    </script>
+
+</body>
+</html>

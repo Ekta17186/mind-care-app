@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Badges</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:60px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        #badge{
+
+            font-size:80px;
+            margin-top:40px;
+        }
+
+        button{
+
+            margin-top:30px;
+            padding:15px 30px;
+            font-size:20px;
+            border:none;
+            border-radius:15px;
+            background:#ff9800;
+            color:white;
+            cursor:pointer;
+        }
+
+        #message{
+
+            margin-top:30px;
+            font-size:26px;
+            color:#444;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Achievement 🏅</h1>
+
+    <div id="badge">
+
+        🔒
+
+    </div>
+
+    <button onclick="unlockBadge()">
+
+        Complete Wellness Task
+
+    </button>
+
+    <div id="message"></div>
+
+    <script>
+
+        function unlockBadge(){
+
+            document.getElementById("badge").innerHTML =
+            "🏅";
+
+            document.getElementById("message").innerHTML =
+
+            "Congratulations! Badge Unlocked 🎉";
+
+        }
+
+    </script>
+
+</body>
+</html>

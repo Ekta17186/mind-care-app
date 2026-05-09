@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Stress Meter</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:60px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        input{
+
+            width:300px;
+            margin-top:40px;
+        }
+
+        #level{
+
+            font-size:35px;
+            margin-top:30px;
+            color:#444;
+        }
+
+        #message{
+
+            margin-top:25px;
+            font-size:24px;
+            color:#555;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Stress Meter 🌦️</h1>
+
+    <input type="range"
+    min="0"
+    max="100"
+    value="20"
+    id="stress"
+    oninput="checkStress()">
+
+    <div id="level">
+
+        Stress Level: 20
+
+    </div>
+
+    <div id="message">
+
+        Feeling relaxed 🌸
+
+    </div>
+
+    <script>
+
+        function checkStress(){
+
+            let value =
+            document.getElementById("stress").value;
+
+            document.getElementById("level").innerHTML =
+
+            "Stress Level: " + value;
+
+            if(value < 30){
+
+                document.getElementById("message").innerHTML =
+
+                "Feeling relaxed 🌸";
+
+            }
+
+            else if(value < 70){
+
+                document.getElementById("message").innerHTML =
+
+                "Take short breaks 💙";
+
+            }
+
+            else{
+
+                document.getElementById("message").innerHTML =
+
+                "Try deep breathing and rest 🌈";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

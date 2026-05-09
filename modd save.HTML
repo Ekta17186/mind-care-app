@@ -1,0 +1,28 @@
+// script.js
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const mood = btn.innerText;
+
+    // Save mood in browser storage
+    localStorage.setItem("lastMood", mood);
+
+    alert("Mood saved: " + mood);
+  });
+});
+
+// Show last saved mood when page loads
+window.addEventListener("load", () => {
+  const savedMood = localStorage.getItem("lastMood");
+
+  if (savedMood) {
+    const display = document.createElement("p");
+    display.innerText = "Last saved mood: " + savedMood;
+    display.style.textAlign = "center";
+    display.style.fontWeight = "bold";
+
+    document.body.insertBefore(display, document.body.firstChild);
+  }
+});

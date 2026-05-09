@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Progress</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:60px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        .bar{
+
+            width:300px;
+            height:35px;
+            background:#ddd;
+            margin:auto;
+            border-radius:20px;
+            overflow:hidden;
+            margin-top:40px;
+        }
+
+        .progress{
+
+            width:0%;
+            height:100%;
+            background:#4caf50;
+            transition:0.5s;
+        }
+
+        button{
+
+            margin-top:30px;
+            padding:15px 30px;
+            font-size:20px;
+            border:none;
+            border-radius:15px;
+            background:#4caf50;
+            color:white;
+            cursor:pointer;
+        }
+
+        #text{
+
+            margin-top:25px;
+            font-size:24px;
+            color:#444;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Progress Tracker 📊</h1>
+
+    <div class="bar">
+
+        <div class="progress"
+        id="progressBar"></div>
+
+    </div>
+
+    <button onclick="increaseProgress()">
+
+        Complete Wellness Task
+
+    </button>
+
+    <div id="text">
+
+        Progress: 0%
+
+    </div>
+
+    <script>
+
+        let progress = 0;
+
+        function increaseProgress(){
+
+            if(progress < 100){
+
+                progress += 10;
+
+                document.getElementById("progressBar")
+                .style.width = progress + "%";
+
+                document.getElementById("text").innerHTML =
+
+                "Progress: " + progress + "%";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

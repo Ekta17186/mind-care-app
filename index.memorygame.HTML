@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mind Care Memory Game</title>
+
+    <style>
+
+        body{
+            background:#dff6ff;
+            text-align:center;
+            font-family:Arial;
+            margin-top:50px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        #number{
+
+            font-size:60px;
+            margin:30px;
+            color:#444;
+        }
+
+        input{
+
+            padding:12px;
+            font-size:20px;
+            border-radius:10px;
+            border:1px solid gray;
+        }
+
+        button{
+
+            margin-top:20px;
+            padding:12px 25px;
+            font-size:18px;
+            border:none;
+            border-radius:10px;
+            background:#4caf50;
+            color:white;
+            cursor:pointer;
+        }
+
+        #result{
+
+            margin-top:30px;
+            font-size:24px;
+            color:#444;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Mind Care Memory Game 🧩</h1>
+
+    <div id="number"></div>
+
+    <input type="text"
+    id="answer"
+    placeholder="Enter number">
+
+    <br>
+
+    <button onclick="checkAnswer()">
+        Check
+    </button>
+
+    <div id="result"></div>
+
+    <script>
+
+        let randomNumber =
+        Math.floor(Math.random() * 9000) + 1000;
+
+        document.getElementById("number").innerHTML =
+        randomNumber;
+
+        setTimeout(function(){
+
+            document.getElementById("number").innerHTML =
+            "? ? ? ?";
+
+        },3000);
+
+        function checkAnswer(){
+
+            let userAnswer =
+            document.getElementById("answer").value;
+
+            if(userAnswer == randomNumber){
+
+                document.getElementById("result").innerHTML =
+                "Correct 🎉";
+
+            }
+
+            else{
+
+                document.getElementById("result").innerHTML =
+                "Wrong 😅 Number was " + randomNumber;
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
