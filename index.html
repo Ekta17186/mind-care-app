@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mind Care App - Home</title>
+    <title>Mind Care App - Main Menu</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #e6f7ff; padding: 50px; }
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #dff6ff; padding: 40px; }
         h1 { color: #333; }
-        .nav-links { margin-top: 30px; }
-        .btn { display: inline-block; padding: 15px 25px; margin: 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        .btn:hover { background-color: #45a049; }
+        .menu-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px; }
+        .btn { display: inline-block; padding: 12px 20px; background-color: #2e7d32; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; transition: 0.2s; }
+        .btn:hover { background-color: #1b5e20; }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to Mind Care App 🧠✨</h1>
-    <p>Apne dimag ka khayal rakhne ke liye niche diye gaye features select karein:</p>
+    <h1>🧠 Welcome to Mind Care App ✨</h1>
+    <p>Apni app ke alag-alag features chalane ke liye niche diye gaye buttons par click karein:</p>
 
-    <div class="nav-links">
-        <a class="btn" href="index.meditation.HTML">🧘 Start Meditation</a>
-        
-        </div>
+    <div class="menu-container">
+        <a class="btn" href="index.meditation.HTML">🧘 Meditation Timer</a>
+        <a class="btn" href="index.aiCHAT.HTML">🤖 AI Chat</a>
+        <a class="btn" href="index.mood.HTML">📊 Mood Tracker</a>
+        <a class="btn" href="index.dalyjournal.HTML">📝 Daily Journal</a>
+        <a class="btn" href="index.game.HTML">🎮 Mental Games</a>
+        <a class="btn" href="index.relaxmusic.HTML">🎵 Relaxing Music</a>
+    </div>
 
 </body>
 </html>
